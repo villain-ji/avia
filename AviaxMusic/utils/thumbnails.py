@@ -10,8 +10,8 @@ import random
 from PIL import Image, ImageChops, ImageOps, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from youtubesearchpython.__future__ import VideosSearch
 
-from AviaxMusic import app
-from AviaxMusic.resource import thumbs, colors
+from AviaxMusic import Avia
+from AviaxMusic.import thumbs, colors
 from config import YOUTUBE_IMG_URL
 
 
@@ -122,10 +122,10 @@ async def get_thumb(videoid, user_id):
         background.paste(image3, (0, 0), mask=image3)
         img = ImageOps.expand(background, border=10, fill=f"{border}")
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("AviaxMusic/resource/font2.ttf", 45)
-        ImageFont.truetype("AviaxMusic/resource/font2.ttf", 70)
-        arial = ImageFont.truetype("AviaxMusic/resource/font2.ttf", 30)
-        ImageFont.truetype("AviaxMusic/resource/font.ttf", 30)
+        font = ImageFont.truetype("AviaxMusic/assets/font2.ttf", 45)
+        ImageFont.truetype("AviaxMusic/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("AviaxMusic/assets/font2.ttf", 30)
+        ImageFont.truetype("AviaxMusic/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
